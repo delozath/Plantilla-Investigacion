@@ -1,0 +1,70 @@
+% Plantilla latex para tesis UAM de maestria y doctorado,
+% aunque tabién sirve para reporte de licenciatura CBI.
+% Laboratorio de Investigación en Neuroimagenología
+% Universidad Autonóma Metropolitana Unidad Iztapalapa
+%
+% @autor Omar Piña-Ramirez
+% @email delozath@gmail.com
+% @year 2017
+% @vesion 1.0
+% @license CC-BY-NC
+%
+% agradecere sus comentarios, contribuciones, 
+% reporte de bugs, su reconocimiento en los agradecimientos
+% de su tesis y la difusión de esta plantilla
+%
+% @note Modificar archivo tesis.sty para personalizar plantilla
+% @note Biblatex: Opciones --> Configuración TexMaker --> ordenes [biber %] 
+% @note Bibtex  : Opciones --> Configuración TexMaker --> ordenes [bibtex %.aux] 
+
+\documentclass[12pt,letterpaper,spanish, twoside]{book}
+\usepackage{tesis}
+
+
+%review mode
+%================
+\usepackage{todonotes}
+\usepackage{lineno}
+\linenumbers
+
+
+%set paths
+%==========
+\graphicspath{{../../images/}}
+
+\title{}
+\author{Omar Pi\~na Ram\'irez}
+
+
+
+
+
+
+\begin{document}
+
+%Personalizar este archivo
+\input{cover} 
+
+\pagenumbering{arabic}
+\chapter{Introducción}
+  \input{introduction}
+
+\chapter{Marco teórico}
+%\input{teorico}
+
+\chapter{Método}
+%\input{metodo}
+
+\chapter{Resultados y Discusión}
+%\input{resultados}
+
+\appendix
+\chapter{Figuras y Cuadros adicionales}
+%\input{appendix}
+
+\newpage
+\printbibliography
+%\bibliographystyle{unsrt}
+%%\bibliography{phd}
+
+\end{document}
