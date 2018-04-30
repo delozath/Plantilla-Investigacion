@@ -20,6 +20,11 @@
 %\usepackage[latin1]{inputenc} %% descomentar para Miktex
 \usepackage[utf8]{inputenc}    %% comentar para Miktex
 
+%Fonts
+%================
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[sc]{mathpazo}
 
 %Math fonts
 %================
@@ -32,8 +37,10 @@
 \parindent 0em
 \usepackage{setspace}
 \onehalfspacing
-\widowpenalty=500
-\clubpenalty=300
+\widowpenalty=650
+\clubpenalty=200
+\brokenpenalty=300
+%\usepackage[all]{nowidow}
 
 
 %Figures and color styles
@@ -60,10 +67,11 @@
 \voffset        = -2cm
 \headheight     = 2em
 \topmargin      = 4em
-\oddsidemargin  = 0.5cm 
-\evensidemargin = -0.5cm
-\textwidth      = 16cm
-\textheight     = 20cm
+%\oddsidemargin  = 0.5cm 
+%\evensidemargin = -.5mm
+\textwidth      = 15.5cm
+\textheight     = 21cm
+\setlength{\evensidemargin}{1cm}
 
 
 %Page
@@ -71,16 +79,22 @@
 \usepackage{fancyhdr}
  \pagestyle{fancy}
     \fancyhf{}
-    \fancyhead[LE,RO]{\textsc{\leftmark}}
-    \fancyhead[RE,LO]{\thepage}
+    %\fancyhead[LE,RO]{\textsc{\leftmark}}
+    %\fancyhead[RE,LO]{\thepage}
+    \fancyhead[LE,RO]{\thepage}
+    \fancyhead[RE,LO]{\textsc{\leftmark}}
     \fancyfoot[LE, RO]{}
 \renewcommand{\headrulewidth}{2pt}
 \renewcommand{\footrulewidth}{0pt}
+
+%Landscapes
+\usepackage{rotating}
 
 
 %Behaviours
 %================
 %TODO: %\usepackage{abstract}
+\usepackage{multirow}
 
 
 %Fonts
@@ -92,6 +106,8 @@
 %================
 \usepackage[autostyle]{csquotes}%
 \usepackage[backend=biber, citestyle=numeric-comp,doi=true,maxcitenames=1]{biblatex}
+\DefineBibliographyStrings{spanish}
+   {andothers = {et al.,}}
 \addbibresource{references.bib}
 %\bibliography{phd}%exclusivo de bibtex
 %\usepackage{cite} %exclusivo de bibtex
@@ -129,13 +145,14 @@
 
 
 \titleformat{\subsubsection}[runin]
-  {\normalfont\scshape}  
+  %{\normalfont\scshape }
+  {\normalfont\itshape }  
   {}                             
   {0pt}                          
   {}
   
 \titlespacing*{\subsubsection}
-{0pt}{0.1em plus 0.1em minus .1em}{0.1em plus .1em}
+{0pt}{0.1em plus 0.1em minus .1em}{.6em}%{0.1em plus .5em}
 
 \titlespacing*{\subsection}  
 {0pt}{0.2em plus 0.1em minus .1em}{0.5em plus .2em}
@@ -143,3 +160,13 @@
 %New commands
 %================
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+
+%Definitions
+%===========
+\newcommand{\fig}{Fig.~}
+\newcommand{\figs}{Figs.~}
+\newcommand{\ej}{por ejemplo }
+\newcommand{\ejs}{v. g.: }
+\newcommand{\blankpage}{\pagebreak\newpage\thispagestyle{empty}\mbox{}\pagebreak}
+
